@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* 基础样式复位 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        /* 导航栏 */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* 英雄区（首屏） */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.5rem; }
+
+        /* 通用容器 */
+        .container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 20px;
+        }
+
+        section { padding: 60px 0; }
+        h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; color: #2c3e50; }
+
+        /* 技能部分 */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 作品集部分 */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: #ddd;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: bold;
+            background-size: cover;
+            color: white;
+            text-shadow: 1px 1px 5px black;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">我的品牌</div>
+            <div class="links">
+                <a href="#about">关于我</a>
+                <a href="#skills">技能</a>
+                <a href="#portfolio">作品</a>
+                <a href="#contact">联系</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>你好，我是 [你的名字]</h1>
+        <p>一名热衷于 [你的职位/兴趣] 的创作者</p>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2>关于我</h2>
+            <p>这里可以写一段简单的自我介绍。例如：我毕业于某某大学，拥有3年开发经验，擅长解决复杂的技术难题，并对极简设计充满热情。</p>
+        </section>
+
+        <section id="skills">
+            <h2>专业技能</h2>
+            <div class="skills">
+                <div class="skill-card"><h3>HTML/CSS</h3><p>精通响应式布局</p></div>
+                <div class="skill-card"><h3>JavaScript</h3><p>熟练交互开发</p></div>
+                <div class="skill-card"><h3>UI 设计</h3><p>使用 Figma/PS</p></div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>我的作品</h2>
+            <div class="portfolio">
+                <div class="project" style="background-image: url('https://picsum.photos/400/300?random=1')">电商网站案例</div>
+                <div class="project" style="background-image: url('https://picsum.photos/400/300?random=2')">个人博客系统</div>
+                <div class="project" style="background-image: url('https://picsum.photos/400/300?random=3')">移动端 App 设计</div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>联系我</h2>
+            <p style="text-align: center;">
+                邮箱：<a href="mailto:yourname@example.com">yourname@example.com</a><br>
+                微信：YourWeChatID
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 [你的名字]. 保留所有权利。</p>
+    </footer>
+
+</body>
+</html>
